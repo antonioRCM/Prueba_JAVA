@@ -171,7 +171,7 @@ public class ServiceAsteroids extends Application {
 			jsonAsteroid = asteroids.getJSONObject(j);
 			
 			// Comprobar si es valido para la extracion
-			if (!jsonAsteroid.getBoolean(Constant.IS_SENTRY_OBJECT)) {
+			if (jsonAsteroid.getBoolean(Constant.IS_SENTRY_OBJECT)) {
 				result = new SalidaDto();
 				//Obtencion del nombre
 				result.setName(jsonAsteroid.getString(Constant.NAME));
